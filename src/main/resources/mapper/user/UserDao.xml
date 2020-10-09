@@ -33,6 +33,6 @@
 
     </insert>
     <select id="getUserById" parameterType="java.lang.Integer" resultType="com.example.demo1.user.entity.UserEntity">
-        select * from user where id=${id}
+        select * from user where id = ${id}
     </select>
 </mapper>
