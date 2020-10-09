@@ -32,9 +32,14 @@
 <script type="text/javascript">
 
     $(function () {
-        GetQueryString("id")
+       var id= GetQueryString("id")
         $.post({
-            url:''
+            url:'user/getUserById='+id,
+            success:function (data) {
+                var userName = $("#exampleInputEmail1").val(data.username);
+                var passWord = $("#exampleInputPassword1").val(data.password);
+                var rePassWord = $("#exampleInputPassword2").val(data.password);
+            }
         })
     })
     function GetQueryString(name){
