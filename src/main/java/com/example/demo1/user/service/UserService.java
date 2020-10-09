@@ -13,4 +13,6 @@ public interface UserService {
 
     // 保存用户
     public void save(UserEntity userEntity);
+
+    public UserEntity getUserById(Integer id);
 }

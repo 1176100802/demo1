@@ -43,4 +43,10 @@ public class UserController {
         userService.save(userEntity);
         return "success";
     }
+
+    @RequestMapping("/getUserById")
+    @ResponseBody
+    public UserEntity getUserById(Integer id){
+            return userService.getUserById(id);
+    }
 }
