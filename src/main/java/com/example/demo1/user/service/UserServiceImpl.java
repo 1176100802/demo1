@@ -40,8 +40,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public String updateUserById(UserEntity userEntity) {
-        return userDao.updateUserById(userEntity);
+    public void updateUserById(UserEntity userEntity) {
+         userDao.updateUserById(userEntity);
     }
 
 }

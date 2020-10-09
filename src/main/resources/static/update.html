@@ -79,6 +79,7 @@
 
         // 封装数据，并提交给后端接口
         var user = {
+            "id" : id,
             "username" : userName,
             "password" : passWord
         }
@@ -88,7 +89,7 @@
 
         // 提交给后端接口
         $.post({
-            url: 'user/save',
+            url: 'user/updateUserById',
             data: userJson,
             contentType: 'application/json',
             success: function (data) {

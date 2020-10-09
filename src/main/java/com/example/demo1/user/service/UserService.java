@@ -17,5 +17,5 @@ public interface UserService {
 
     public UserEntity getUserById(Integer id);
 
-    public String updateUserById(@RequestBody UserEntity userEntity);
+    public void updateUserById(@RequestBody UserEntity userEntity);
 }
