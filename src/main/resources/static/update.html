@@ -34,7 +34,7 @@
     $(function () {
        var id= GetQueryString("id")
         $.post({
-            url:'user/getUserById='+id,
+            url:'user/getUserById?id='+id,
             success:function (data) {
                 var userName = $("#exampleInputEmail1").val(data.username);
                 var passWord = $("#exampleInputPassword1").val(data.password);
