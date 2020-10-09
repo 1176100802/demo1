@@ -35,4 +35,13 @@
     <select id="getUserById" parameterType="java.lang.Integer" resultType="com.example.demo1.user.entity.UserEntity">
         select * from user where id = ${id}
     </select>
+    
+    <update id="updateUserById" parameterType="com.example.demo1.user.entity.UserEntity">
+        UPDATE `demo`.`user`
+            SET
+            `username` = #{username},
+            `password` = #{password}
+            WHERE
+	        (`id` = ${id});
+    </update>
 </mapper>

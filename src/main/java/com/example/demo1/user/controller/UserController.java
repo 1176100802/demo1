@@ -49,4 +49,10 @@ public class UserController {
     public UserEntity getUserById(Integer id){
             return userService.getUserById(id);
     }
+    @RequestMapping("/updateUserById")
+    @ResponseBody
+    public String updateUserById(@RequestBody UserEntity userEntity){
+         userService.updateUserById(userEntity);
+        return "sucess";
+    }
 }
